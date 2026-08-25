@@ -65,19 +65,21 @@ export default function MaqtuPage() {
         
         <div className="bg-brand-cream/30 p-2 sm:p-6 rounded-2xl space-y-4">
           {maqtuData.verses.map((verse, index) => (
-            <div key={verse.id} className="relative">
-              <div className="flex justify-center md:hidden mb-2">
-                <div className="w-7 h-7 rounded-full bg-brand-cream border border-brand-lightGold flex items-center justify-center text-brand-gold font-bold font-sans text-xs shadow-sm">
-                  {index + 1}
-                </div>
-              </div>
-              <div className="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-brand-cream border border-brand-lightGold items-center justify-center text-brand-gold font-bold font-sans text-sm z-10 shadow-sm hidden md:flex">
+            <div key={verse.id} className="relative flex items-center gap-2 sm:gap-0">
+              {/* Mobile portrait: number beside verse */}
+              <div className="flex-shrink-0 sm:hidden w-7 h-7 rounded-full bg-brand-cream border border-brand-lightGold flex items-center justify-center text-brand-gold font-bold font-sans text-xs shadow-sm">
                 {index + 1}
               </div>
-              <PoemVerse 
-                verse={verse} 
-                onPhraseClick={(phrase) => setSelectedPhrase(phrase)} 
-              />
+              {/* Desktop & Landscape: number floating on right */}
+              <div className="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-brand-cream border border-brand-lightGold items-center justify-center text-brand-gold font-bold font-sans text-sm z-10 shadow-sm hidden sm:flex">
+                {index + 1}
+              </div>
+              <div className="flex-1">
+                <PoemVerse 
+                  verse={verse} 
+                  onPhraseClick={(phrase) => setSelectedPhrase(phrase)} 
+                />
+              </div>
             </div>
           ))}
         </div>

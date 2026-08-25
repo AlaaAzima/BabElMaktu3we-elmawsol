@@ -100,16 +100,16 @@ export default function PoemVerse({ verse, onPhraseClick }: PoemVerseProps) {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-brand-cream p-4 md:p-6 mb-4 hover:shadow-md transition-shadow">
-      {/* Desktop: original side-by-side layout */}
-      <div className="hidden md:flex items-center justify-between w-full font-amiri text-2xl md:text-3xl leading-loose">
+    <div className="bg-white rounded-xl shadow-sm border border-brand-cream p-3 sm:p-4 md:p-6 mb-4 hover:shadow-md transition-shadow">
+      {/* Desktop & Landscape: side-by-side layout */}
+      <div className="hidden sm:flex items-center justify-between w-full font-amiri text-xl sm:text-2xl md:text-3xl leading-loose">
         <div className="flex-1 text-center leading-loose">{renderShatr(verse.shatr1)}</div>
         <div className="mx-2 md:mx-6 text-brand-gold font-bold">۞</div>
         <div className="flex-1 text-center leading-loose">{renderShatr(verse.shatr2)}</div>
       </div>
 
-      {/* Mobile: stacked layout */}
-      <div className="flex md:hidden flex-col items-center gap-1 font-amiri text-lg leading-relaxed">
+      {/* Mobile portrait: stacked layout */}
+      <div className="flex sm:hidden flex-col items-center gap-1 font-amiri text-lg leading-relaxed">
         <div className="text-center leading-relaxed w-full">{renderShatr(verse.shatr1)}</div>
         <div className="text-brand-gold text-sm">✦</div>
         <div className="text-center leading-relaxed w-full">{renderShatr(verse.shatr2)}</div>
