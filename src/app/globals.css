@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-ivory text-brand-darkGreen;
+    direction: rtl;
+  }
+}
+
+.poem-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.poem-shatr {
+  flex: 1;
+  text-align: center;
+}
+.poem-separator {
+  margin: 0 1rem;
+  color: theme('colors.brand.gold');
+  font-weight: bold;
+}
