@@ -35,8 +35,8 @@ export default function MaqtuPage() {
               <iframe 
                 width="100%" 
                 height="100%" 
-                src="https://www.youtube.com/embed/fDJsGqCyF0Q?autoplay=1" 
-                title="YouTube video player" 
+                src="https://www.youtube.com/embed/kxWzBARsS0k?start=462&autoplay=1" 
+                title="متن الجزرية" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowFullScreen

@@ -101,10 +101,14 @@ export default function PoemVerse({ verse, onPhraseClick }: PoemVerseProps) {
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-brand-cream p-4 md:p-6 mb-4 hover:shadow-md transition-shadow">
-      <div className="poem-line font-amiri text-2xl md:text-3xl leading-loose">
-        <div className="poem-shatr text-right leading-loose">{renderShatr(verse.shatr1)}</div>
-        <div className="poem-separator mx-2 md:mx-6 text-brand-gold">❁</div>
-        <div className="poem-shatr text-left leading-loose">{renderShatr(verse.shatr2)}</div>
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full font-amiri text-lg sm:text-xl md:text-2xl lg:text-3xl leading-loose gap-2 lg:gap-0">
+        <div className="w-full lg:flex-1 text-center lg:text-right leading-loose whitespace-normal sm:whitespace-nowrap overflow-hidden text-ellipsis">
+          {renderShatr(verse.shatr1)}
+        </div>
+        <div className="poem-separator mx-2 md:mx-6 text-brand-gold hidden lg:block">۞</div>
+        <div className="w-full lg:flex-1 text-center lg:text-left leading-loose whitespace-normal sm:whitespace-nowrap overflow-hidden text-ellipsis">
+          {renderShatr(verse.shatr2)}
+        </div>
       </div>
     </div>
   );
