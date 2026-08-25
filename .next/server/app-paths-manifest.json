@@ -1,0 +1,6 @@
+{
+  "/taat/page": "app/taat/page.js",
+  "/sources/page": "app/sources/page.js",
+  "/page": "app/page.js",
+  "/maqtu/page": "app/maqtu/page.js"
+}
